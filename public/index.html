@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Finance</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+  <div class="main" style="display: block;">
+    <div class="jumbotron jumbotron-fluid color-green">
+      <div class="container">
+        <h1 class="display-4 text-white text-center">dev.finance$</h1>
+        <p class="lead text-center addBalance" id="addBalance">Adicionar receita ou despesa</p>
+      </div>
+    </div>
+
+    <div class="row p-4">
+      <div class="col-md-6" style="margin: 20px auto 0 auto">
+        <div class="card color-green text-white">
+          <div class="card-body">
+            <h2 class="card-title">
+              Receita
+            </h2>
+
+            <h3 class="lead my-4" id="recipe-text" style="font-size: 30px;">
+
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6" style="margin: 20px auto 0 auto">
+        <div class="card color-red text-white">
+          <div class="card-body">
+            <h2 class="card-title">
+              Despesas
+            </h2>
+
+            <h3 class="lead my-4" id="recipe-out-text" style="font-size: 30px;">
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12 p-4">
+      <div class="card text-white bg-dark">
+        <div class="card-body">
+          <h2 class="card-title">
+            Receita final
+          </h2>
+
+          <h3 class="lead my-4" id="recipe-balance" style="font-size: 30px;">
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin: 50px auto;">
+      <div class="title text-center">
+        <h1 class="display-4 mb-3">
+          Despesas e receitas
+        </h1>
+      </div>
+
+
+      <div class="">
+        <table class="table table-hover table-borderless">
+          <thead>
+            <tr class="text-dark">
+              <th scope="col">Descrição</th>
+              <th scope="col">Valor</th>
+              <th scope="col">Data</th>
+            </tr>
+          </thead>
+
+          <tbody id="tbody">
+
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bg-modal" style="display: none;">
+    <div class="modal" id="modal" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+
+            <h5 class="modal-title">Adicionar balance</h5>
+
+            <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" id="close">&times;</span>
+            </button>
+
+          </div>
+
+          <div class="modal-body">
+            <form id="formAddBalance">
+              <div class="form-group col-8">
+                <label for="descriptionBalance" class="form-label">Descrição</label>
+                <input type="text" class="form-control" id="descriptionBalance" placeholder="Exemplo">
+              </div>
+
+              <div class="form-group col-8">
+                <label for="valueBalance" class="form-label">Valor</label>
+                <input type="number" step="0.01" class="form-control" id="valueBalance" placeholder="0,00">
+                <small class="text-muted" style="font-size: 9px;">
+                  Use o sinal - (negativo) para despesas e , (virgula) para casas decimais
+                </small>
+              </div>
+
+              <div class="form-group col-8">
+                <label for="dateBalance" class="form-label">Data</label>
+                <input type="date" class="form-control" id="dateBalance" min="2020-01-01">
+              </div>
+
+              <div class="errors col-md-12">
+
+              </div>
+
+              <div class="form-group col-8">
+                <input type="submit" value="Adicionar" class="btn btn-success">
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./assets/bundle.js"></script>
+</body>
+</html>
