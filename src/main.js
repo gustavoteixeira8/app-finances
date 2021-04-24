@@ -133,3 +133,5 @@ document.addEventListener('click', (e) => {
     initApp()
   }
 })
+
+// Version 2
