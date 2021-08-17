@@ -4,7 +4,8 @@
   "description": "",
   "main": "",
   "scripts": {
-    "start": "webpack -w"
+    "start": "webpack -w",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
